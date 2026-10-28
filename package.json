@@ -1,7 +1,7 @@
 {
   "name": "explorefly",
   "productName": "ExploreFly",
-  "version": "1.0.5",
+  "version": "1.0.1",
   "private": true,
   "description": "Watch the connectome of the fruit fly react to images, videos, files and websites.",
   "author": "antquu (https://github.com/antquu)",
