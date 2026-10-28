@@ -1,0 +1,39 @@
+appId: com.antquu.explorefly
+productName: ExploreFly
+copyright: Copyright © 2026 antquu
+directories:
+  output: release
+  buildResources: build
+files:
+  - out/**
+  - package.json
+  - "!**/*.map"
+asar: true
+# The GPL travels with every installed copy
+extraResources:
+  - from: LICENSE
+    to: LICENSE.txt
+electronDownload:
+  cache: .cache/electron-builder
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.png
+  artifactName: ExploreFly-Setup-${version}.${ext}
+  verifyUpdateCodeSignature: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: ExploreFly
+  deleteAppDataOnUninstall: false
+  license: LICENSE
+# Installed copies check this repository's releases and update themselves
+publish:
+  provider: github
+  owner: antquu
+  repo: ExploreFly
+  releaseType: release

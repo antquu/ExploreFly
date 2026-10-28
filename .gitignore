@@ -1,0 +1,8 @@
+node_modules/
+out/
+release/
+.cache/
+*.log
+.env*
+.claude/
+release.bat
